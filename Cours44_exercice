@@ -20,6 +20,7 @@ def question_1():
     reponse_int = ""
     x = random.randint(a, b)
     y = random.randint(a, b)
+    #réponse attendue
     n = x+y
     while reponse_int != n:
         reponse_str = input("Combien font "+str(x)+" + "+str(y)+" ?")
