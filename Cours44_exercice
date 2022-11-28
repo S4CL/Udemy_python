@@ -1,0 +1,51 @@
+
+print("""
+      Bienvenue dans 
+      CALCUL MENTAL
+       """)
+print()
+
+#---------------------------------------------------------------------------------------------
+#variables main:
+player = ""
+#---------------------------------------------------------------------------------------------
+#fonctions:
+
+def question_1():
+    reponse_int = ""
+    x = random.randint(1, 10)
+    y = random.randint(1, 10)
+    n = x+y
+    while reponse_int != n:
+        reponse_str = input("Combien font "+str(x)+" + "+str(y)+" ?")
+        try:
+            reponse_int = int(reponse_str)
+        except ValueError:
+            print("Attention la réponse est une valeur numérique !")
+        if reponse_int == n:
+            print("Bravo !! " + player)
+            print()
+        else:
+            print("Mauvaise réponse ! ")
+
+
+#---------------------------------------------------------------------------------------------
+#Code principal "Calcul mental"
+import random
+
+while player == "":
+    player = input("Quel est le nom du joueur ?")
+    if player != "" :
+        print("Bonjour "+player)
+    else :
+        print("Merci de rentrer un nom de joueur valide")
+
+
+QUESTION = 11
+
+for i in range(1, QUESTION):
+    str(i+1)
+    print("question "+str(i) + ":")
+    question_1()
+print()
+print("Félicitations "+player+" QCM terminé.")
